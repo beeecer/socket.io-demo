@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Microeconomics Game</title>
+<style>
+  #results-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: none; /* Initially hide the table */
+  }
+  #results-table, #results-table th, #results-table td {
+    border: 1px solid black;
+  }
+  #results-table th, #results-table td {
+    padding: 5px;
+    text-align: left;
+  }
+</style>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/game.js"></script>
+</head>
+<body>
+<div id="game">
+  <h1>Microeconomics Game</h1>
+  <button id="red-card">Red Card</button>
+  <button id="black-card">Black Card</button>
+  <div id="result">Please select a card.</div>
+  <div id="score">Total Score: 0</div>
+  <!-- The table is hidden until the game is over -->
+  <table id="results-table">
+    <thead>
+      <tr>
+        <th>Round</th>
+        <th>Points This Round</th>
+        <th>Total Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Round results will be added here by game.js -->
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
